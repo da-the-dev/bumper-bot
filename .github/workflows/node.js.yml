@@ -32,4 +32,4 @@ jobs:
         TOKEN1: ${{ secrets.TOKEN1 }}
         TOKEN2: ${{ secrets.TOKEN2 }}
         TOKEN3: ${{ secrets.TOKEN3 }}
-      PINGERID: ${{ secrets.PINGERID }}
+        PINGERID: ${{ secrets.PINGERID }}
