@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      TOKEN1: ODEyNzA1NTA3ODgyMDQxMzY1.YDky7Q.QzMxOI4lHB6vUg6y_AywgCw9AsE
-      TOKEN2: NzkyMDQ3MDI0NDA0MDM3NjYy.YDkz-Q.dCwOSS59QFAoX8Zl6uRMoNZ3O3c
-      TOKEN3: NzkyMDYzMDE1NDgxOTAxMTA2.YDk0iA.FKsru6mK2iY3GP9ajsklNmSLG-4
-      PINGERID: 478321260481478677
+      TOKEN1: ${{ secrets.TOKEN1 }}
+      TOKEN2: ${{ secrets.TOKEN2 }}
+      TOKEN3: ${{ secrets.TOKEN3 }}
+      PINGERID: ${{ secrets.PINGERID }}
     
     strategy:
       matrix:
