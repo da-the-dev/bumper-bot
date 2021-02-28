@@ -1,4 +1,4 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+  # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: bumper bot
@@ -13,7 +13,13 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    
+    env:
+      TOKEN1: ODEyNzA1NTA3ODgyMDQxMzY1.YDky7Q.QzMxOI4lHB6vUg6y_AywgCw9AsE
+      TOKEN2: NzkyMDQ3MDI0NDA0MDM3NjYy.YDkz-Q.dCwOSS59QFAoX8Zl6uRMoNZ3O3c
+      TOKEN3: NzkyMDYzMDE1NDgxOTAxMTA2.YDk0iA.FKsru6mK2iY3GP9ajsklNmSLG-4
+      PINGERID: 478321260481478677
+    
     strategy:
       matrix:
         node-version: [12.x]
