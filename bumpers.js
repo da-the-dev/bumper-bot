@@ -47,11 +47,11 @@ likeRule2.hour = 3
 likeRule2.minute = 0
 likeRule2.date = 15
 schedule.scheduleJob(likeRule1, () => {
-    console.log('job schedule !like')
+    console.log('job schedule !like 1 ')
     firstClient.guilds.first().channels.get(bumpChannelID).send('!like')
 })
 schedule.scheduleJob(likeRule2, () => {
-    console.log('job schedule !like')
+    console.log('job schedule !like 15')
     firstClient.guilds.first().channels.get(bumpChannelID).send('!like')
 })
 
@@ -67,11 +67,11 @@ bumpRule2.hour = 7
 bumpRule2.mute = 0
 bumpRule2.date = 15
 schedule.scheduleJob(bumpRule1, () => {
-    console.log('job schedule !bump')
+    console.log('job schedule !bump 1')
     firstClient.guilds.first().channels.get(bumpChannelID).send('!bump')
 })
 schedule.scheduleJob(bumpRule2, () => {
-    console.log('job schedule !bump')
+    console.log('job schedule !bump 15')
     firstClient.guilds.first().channels.get(bumpChannelID).send('!bump')
 })
 
@@ -87,11 +87,11 @@ supRule2.hour = 12
 supRule2.minute = 0
 supRule2.date = 15
 schedule.scheduleJob(supRule1, () => {
-    console.log('job schedule s.up')
+    console.log('job schedule s.up 1')
     firstClient.guilds.first().channels.get(bumpChannelID).send('s.up')
 })
 schedule.scheduleJob(supRule2, () => {
-    console.log('job schedule s.up')
+    console.log('job schedule s.up 15')
     firstClient.guilds.first().channels.get(bumpChannelID).send('s.up')
 })
 
