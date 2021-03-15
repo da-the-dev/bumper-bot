@@ -26,6 +26,7 @@ const bump = () => {
         return
     }
     bumpers[rand][0].channel.send(bumpers[rand][1])
+    bumpers = []
 }
 
 const checkBumps = () => {
@@ -99,7 +100,7 @@ for(var i = 0; i < 6; i++) {
             var command = msg.content.slice(index, msg.content.length - 1)
             if(command) {
                 bumpers.push([msg, command])
-                console.log(bumpers)
+                console.log(bumpers.length, tokens.length)
                 checkBumps()
             }
         }
