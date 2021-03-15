@@ -38,16 +38,20 @@ const checkBumps = () => {
 const likeRule1 = new schedule.RecurrenceRule()
 likeRule1.tz = 'Europe/London'
 likeRule1.hour = 3
+likeRule1.minute = 0
 likeRule1.date = 1
 
 const likeRule2 = new schedule.RecurrenceRule()
 likeRule2.tz = 'Europe/London'
 likeRule2.hour = 3
+likeRule2.minute = 0
 likeRule2.date = 15
 schedule.scheduleJob(likeRule1, () => {
+    console.log('job schedule !like')
     firstClient.guilds.first().channels.get(bumpChannelID).send('!like')
 })
 schedule.scheduleJob(likeRule2, () => {
+    console.log('job schedule !like')
     firstClient.guilds.first().channels.get(bumpChannelID).send('!like')
 })
 
@@ -55,15 +59,19 @@ schedule.scheduleJob(likeRule2, () => {
 const bumpRule1 = new schedule.RecurrenceRule()
 bumpRule1.tz = 'America/New_York'
 bumpRule1.hour = 7
+bumpRule1.mute = 0
 bumpRule1.date = 1
 const bumpRule2 = new schedule.RecurrenceRule()
 bumpRule2.tz = 'America/New_York'
 bumpRule2.hour = 7
+bumpRule2.mute = 0
 bumpRule2.date = 15
 schedule.scheduleJob(bumpRule1, () => {
+    console.log('job schedule !bump')
     firstClient.guilds.first().channels.get(bumpChannelID).send('!bump')
 })
 schedule.scheduleJob(bumpRule2, () => {
+    console.log('job schedule !bump')
     firstClient.guilds.first().channels.get(bumpChannelID).send('!bump')
 })
 
@@ -71,15 +79,19 @@ schedule.scheduleJob(bumpRule2, () => {
 const supRule1 = new schedule.RecurrenceRule()
 supRule1.tz = 'Europe/Moscow'
 supRule1.hour = 12
+supRule1.minute = 0
 supRule1.date = 1
 const supRule2 = new schedule.RecurrenceRule()
 supRule2.tz = 'Europe/Moscow'
 supRule2.hour = 12
+supRule2.minute = 0
 supRule2.date = 15
 schedule.scheduleJob(supRule1, () => {
+    console.log('job schedule s.up')
     firstClient.guilds.first().channels.get(bumpChannelID).send('s.up')
 })
 schedule.scheduleJob(supRule2, () => {
+    console.log('job schedule s.up')
     firstClient.guilds.first().channels.get(bumpChannelID).send('s.up')
 })
 
