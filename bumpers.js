@@ -99,7 +99,10 @@ for(var i = 0; i < 6; i++) {
             var index = msg.content.indexOf('・') + 3
             var command = msg.content.slice(index, msg.content.length - 1)
             if(command) {
-                bumpers.push([msg, command])
+                if(command == '/like')
+                    bumpers.push([msg, '!like'])
+                else
+                    bumpers.push([msg, command])
                 console.log(bumpers.length, tokens.length)
                 checkBumps()
             }
